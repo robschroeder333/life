@@ -6,6 +6,7 @@ function Place(name, world, indoor) {
   this.world = world
   this.connections = {};
   this.isIndoor = indoor;
+  this.contains = {};
 
   this.connectTo = connectedTo => {
     connectedTo.forEach(n => {
@@ -14,7 +15,14 @@ function Place(name, world, indoor) {
   }
 }
 
+function precipitaion(place) {
+  if(!place.isIndoor){
+    const chance = Math.random * 100;
+    //TODO: weather logic
+  }
+}
+
 module.exports = {
-  WorldMap = WorldMap,
-  Place = Place
+  WorldMap: WorldMap,
+  Place: Place
 }

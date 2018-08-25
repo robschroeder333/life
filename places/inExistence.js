@@ -13,3 +13,5 @@ world.places.forest.connectTo(['cave', 'town']);
 world.places.cave.connectTo(['forest']);
 world.places.town.connectTo(['forest', 'inn']);
 world.places.inn.connectTo(['town']);
+
+module.exports = {World: world}
